@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuborg 0</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+
+
+    <style>
+        #diagram {
+            /*border: 1px solid #000;*/
+            border-radius: 50%;
+            width: 80%;
+            max-width: 300px;
+            stroke-width: 15;
+            fill: none;
+            font-size: .5em;
+            transform: rotate(-90deg);
+        }
+
+        #udsnit1 {
+            stroke: #fdecd7;
+
+        }
+
+        #udsnit2 {
+            stroke: #bee0da;
+
+        }
+
+        #udsnit3 {
+            stroke: #658BEB;
+
+        }
+
+        #udsnit4 {
+            stroke: #EBB1CE;
+
+        }
+
+        .barchart {
+            max-width: 500px;
+        }
+
+        #chart line {
+            stroke: #FFF;
+            stroke-width: .5;
+        }
+
+        #chart .genre {
+            font-size: 13px;
+            font-family: sans-serif;
+        }
+
+        #chart .maaleenhed {
+            font-size: 9px;
+            font-family: sans-serif;
+        }
+
+        .bar circle {
+            stroke-width: 6;
+            stroke: #fff;
+            fill: none;
+        }
+
+        text {
+            color: indianred;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="menuknap" class="burger_svg"></div>
+            <ul id="menu" class="">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="dokumentation.html">Dokumentation</a></li>
+                <li><a href="video.html">Videoer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="splash">
+            <img src="SVG/splash.png" alt="" class="hide">
+            <video controls loop width="100%" height="100%" title="Tuborg Nul Kampangevideo">
+                <source src="kampagne_video_25_sek_version2.mp4" type="video/mp4"></video>
+            <h1>Tuborg</h1>
+            <h2>Præcis som ingen andre øl</h2>
+        </section>
+
+        <section id="intro">
+            <h1>Præcis når du vil</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iste voluptate nobis quibusdam, necessitatibus iure libero commodi facere tenetur aliquam, atque, rem vitae. Mollitia in consectetur id explicabo nostrum ut necessitatibus. </p>
+
+        </section>
+
+        <section id="facts">
+            <div id="can">
+                <img src="SVG/Screenshot%202020-10-12%20at%2001.35.13.png" alt="">
+            </div>
+
+            <article id="beerinfo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt perspiciatis voluptatem porro laudantium. Veniam, minus. Doloribus perferendis beatae quibusdam nulla laudantium inventore alias, id ex vitae veniam similique voluptatibus incidunt porro, corrupti explicabo dignissimos consequuntur quos! Eos nemo quia dolores voluptates natus rerum at explicabo! Quam rem at blanditiis neque aliquam quo? Sunt nulla laudantium pariatur.</p>
+            </article>
+
+            <article id="smellandtaste">
+                <div class="container">
+                    <h3>Duft og smag</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ad maxime, voluptas eligendi aliquam animi.</p>
+                    <svg class="barchart" viewbox="0 0 200 70">
+                        <g id="chart">
+                            <text class="genre" x="0" y="20">Fylde</text>
+                            <text class="maaleenhed" x="0" y="40">LET</text>
+                            <text class="maaleenhed" x="150" y="40">KRAFTIG</text>
+
+                            <line x="0" x2="200" y1="50" y2="50"></line>
+                        </g>
+
+                        <g class="bar">
+                            <circle id="udsnit1" cx="50" cy="50" r="3"></circle>
+                        </g>
+
+                    </svg>
+                    <svg class="barchart" viewbox="0 0 200 70">
+                        <g id="chart">
+                            <text class="genre" x="0" y="20">Livlighed</text>
+                            <text class="maaleenhed" x="0" y="40">ROLIG</text>
+                            <text class="maaleenhed" x="160" y="40">LIVLIG</text>
+
+                            <line x="0" x2="200" y1="50" y2="50"></line>
+                        </g>
+
+
+                        <g class="bar">
+                            <circle id="udsnit1" cx="100" cy="50" r="3"></circle>
+                        </g>
+
+                    </svg>
+
+                    <svg class="barchart" viewbox="0 0 200 70">
+                        <g id="chart">
+                            <text class="genre" x="0" y="20">Bitterhed</text>
+                            <text class="maaleenhed" x="0" y="40">LIDT</text>
+                            <text class="maaleenhed" x="160" y="40">MEGET</text>
+
+                            <line x="0" x2="200" y1="50" y2="50"></line>
+                        </g>
+
+                        <g class="bar">
+                            <circle id="udsnit1" cx="50" cy="50" r="3"></circle>
+                        </g>
+
+                    </svg>
+                </div>
+            </article>
+        </section>
+
+        <section id="data">
+            <article id="databeskrivelse">
+                <h1>Grafer som beskriver Nul</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, nulla autem deleniti quasi ad, dolores placeat et atque ea voluptatum.</p>
+                <div id="personer">
+                    <img id="person1" src="SVG/person_1_1.svg" alt="">
+                    <img id="person2" src="SVG/Person_2_1.svg" alt="">
+                    <img id="person3" src="SVG/Person_3_1.svg" alt="">
+                    <img id="person4" src="SVG/person_4_1.svg" alt="">
+                </div>
+            </article>
+            <div id="datagrid">
+                <article id="graph">
+                    <img src="SVG/person_1.svg" alt="">
+
+
+
+                    <svg id="diagram" viewbox="0 0 100 100">
+                        <circle id="udsnit1" cx="50" cy="50" r="50"></circle>
+                        <circle id="udsnit2" cx="50" cy="50" r="50"></circle>
+                        <circle id="udsnit3" cx="50" cy="50" r="50"></circle>
+                        <circle id="udsnit4" cx="50" cy="50" r="50"></circle>
+                    </svg>
+
+
+                </article>
+
+                <div id="graphinfo">
+                    <article id="graph1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sed laboriosam, possimus quod facilis. Molestiae nam labore harum hic qui voluptatum consequuntur itaque aspernatur, accusamus recusandae repellendus mollitia dicta quam repellat architecto iure veritatis, ipsa alias.</p>
+                        <button id="graphbut">Læs mere</button>
+                    </article>
+                </div>
+
+                <div id="arrow_right"></div>
+                <div id="arrow_left"></div>
+            </div>
+        </section>
+
+        <section id="game">
+            <article>
+                <img src="" alt="">
+                <img id="logotilgame" src="Tuborg_NUL_assets/tuborglogoweb.svg" alt="">
+            </article>
+            <article>
+                <h1>Vind med Nul</h1>
+                <p>Besvar quizzen deltag i lodtrækningen om at vinde en 24 pack Tuborg Nul!</p>
+                <button>Klik for at deltage</button>
+            </article>
+        </section>
+
+        <section id="playgame">
+            <h1 id="gameheadline">Spørgsmål 1/6</h1>
+            <p id="question">Hvor mange procent alkohol er der i Tuborg Nul?</p>
+            <div class="svarmulighed" id="answer1">0 Procent</div>
+            <div class="svarmulighed" id="answer2">0,6 Procent</div>
+            <div class="svarmulighed" id="answer3">0,2 Procent</div>
+            <div class="svarmulighed" id="answer4">1 Procent</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kundeservice tlf: 00000000</p>
+        <p>Kundeservice@carlsberg.dk</p>
+        <p>Privatpilitik</p>
+        <p>Cookiepolitik</p>
+        <p>Vilkår og betingelser</p>
+        <p>Politik for acceptabel brug</p>
+        <p>Se fødevarestyrelsens smiley-rapporter</p>
+        <img src="" alt="facebook svg logo">
+        <img src="" alt="instagram svg logo">
+    </footer>
+
+    <p id="holder"></p>
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+
+        // menu
+
+        function sidenVises() {
+            console.log(sidenVises);
+
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+            answer1.addEventListener("click", question2);
+            answer2.addEventListener("click", question2);
+            answer3.addEventListener("click", question2);
+            answer4.addEventListener("click", question2);
+        }
+
+        function toggleMenu() {
+            console.log(toggleMenu);
+
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let hidden = document.querySelector("#menu").classList.contains("hidden");
+
+            if (hidden == true) {
+                document.querySelector("#menuknap").classList = ("cross_svg");
+            } else {
+                document.querySelector("#menuknap").classList = ("burger_svg");
+            }
+        }
+
+        //cirkel diagram
+        const values = [5, 2, 3, 2];
+        const offset = [0, 5, 7, 10];
+        const omkreds = Math.PI * 100;
+        const holder = document.querySelector('#holder');
+        let total = 0;
+
+        // Beregner summen af værdierne
+        values.forEach(value => total += value);
+
+        // Beregner forholdet
+        const forhold = omkreds / total;
+
+        document.querySelectorAll("#diagram circle").forEach((c, i) => {
+            c.style.strokeDasharray = values[i] * forhold + " " + omkreds;
+
+            offset.push(values[i] + offset[i]);
+
+            c.style.strokeDashoffset = -offset[i] * forhold;
+
+            c.setAttribute("data-value", values[i]);
+            c.setAttribute("data-procent", values[i] / total * 100);
+
+            //lytter efter mouseover og mouseout som kalder functionen vis og removeAll (tilføker og fjerner text i cirkeldiagrammet)
+            c.addEventListener("mouseover", e => vis(e));
+            c.addEventListener("mouseout", removeAll);
+
+        })
+
+        //viser text på mouse over i cirkeldiagram når eventlistneren hører mouseover
+        function vis(e) {
+            holder.textContent = /*e.target.dataset.value + "/" + */ e.target.dataset.procent;
+            holder.style.display = "block";
+            window.addEventListener("mousemove", followMouse);
+        }
+
+        //får holder til at følge musemarkøren
+        function followMouse(e) {
+            console.log(followMouse);
+            holder.style.top = (e.clientY - 50) + 'px';
+            holder.style.left = (e.clientX) + 'px';
+        }
+
+        // Sætter holder til display none når der eventlistneren hører mouseout.
+        function removeAll() {
+            holder.style.display = "none";
+            window.removeEventListener("mousemove", followMouse);
+        }
+
+
+
+        //Game
+        let question = document.querySelector("#question");
+        let answer1 = document.querySelector("#answer1");
+        let answer2 = document.querySelector("#answer2");
+        let answer3 = document.querySelector("#answer3");
+        let answer4 = document.querySelector("#answer4");
+
+        let gameheadline = document.querySelector("#gameheadline");
+
+        function question2() {
+            console.log(question2);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "2/6";
+            question.innerHTML = "Hvilken farve har Tuborg 0?";
+            answer1.innerHTML = "Turkis";
+            answer2.innerHTML = "Blå";
+            answer3.innerHTML = "Gul";
+            answer4.innerHTML = "Grøn";
+
+            answer1.addEventListener("click", question3);
+            answer2.addEventListener("click", question3);
+            answer3.addEventListener("click", question3);
+            answer4.addEventListener("click", question3);
+        }
+
+
+        function question3() {
+            console.log(question3);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "3/6";
+            question.innerHTML = "Hvor mange billeder af Tuborg 0 er der på siden?";
+            answer1.innerHTML = "2 gange";
+            answer2.innerHTML = "3 gange";
+            answer3.innerHTML = "5 gange";
+            answer4.innerHTML = "4 gange";
+            answer1.addEventListener("click", question4);
+            answer2.addEventListener("click", question4);
+            answer3.addEventListener("click", question4);
+            answer4.addEventListener("click", question4);
+        }
+
+        function question4() {
+            console.log(question4);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "4/6";
+            question.innerHTML = "Hvad kan man vinde i denne konkurrence?";
+            answer1.innerHTML = "1 Tuborg Nul 6 pack";
+            answer2.innerHTML = "1 Tuborg Nul 24 pack";
+            answer3.innerHTML = "2 Tuborg Nul dåseøl ";
+            answer4.innerHTML = "Ingen ting";
+            answer1.addEventListener("click", question5);
+            answer2.addEventListener("click", question5);
+            answer3.addEventListener("click", question5);
+            answer4.addEventListener("click", question5);
+        }
+
+        function question5() {
+            console.log(question5);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "5/6";
+            question.innerHTML = "Hvem drikker Tuborg Nul?";
+            answer1.innerHTML = "Kvinder der er gravide";
+            answer2.innerHTML = "Folk der skal køre bil";
+            answer3.innerHTML = "Alle, i alle situationer";
+            answer4.innerHTML = "Folk der skal tidligt op";
+            answer1.addEventListener("click", question6);
+            answer2.addEventListener("click", question6);
+            answer3.addEventListener("click", question6);
+            answer4.addEventListener("click", question6);
+        }
+
+        function question6() {
+            console.log(question6);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "6/6";
+            question.innerHTML = "Hvor mange % har svært ved at fravælge alkohol i sociale sammenhænhe?";
+            answer1.innerHTML = "10%";
+            answer2.innerHTML = "50%";
+            answer3.innerHTML = "44%";
+            answer4.innerHTML = "70%";
+            answer1.addEventListener("click", signUp);
+            answer2.addEventListener("click", signUp);
+            answer3.addEventListener("click", signUp);
+            answer4.addEventListener("click", signUp);
+        }
+
+        function signUp() {
+            console.log(signUp);
+
+            gameheadline.innerHTML = "Spørgsmål" + " " + "6/6";
+            question.innerHTML = "Indtast din Email og deltag i konkurrencen?";
+            answer1.style.display = "none";
+            answer2.style.display = "none";
+            answer3.style.display = "none";
+            answer4.innerHTML = "Deltag";
+
+            answer4.addEventListener("click", Luk);
+        }
+
+    </script>
+
+</body>
+
+</html>
