@@ -1,0 +1,129 @@
+  <!DOCTYPE html>
+  <html lang="da">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+
+    <style>
+        section {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        main {
+            background-color: #bee0da;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        body {
+            background-color: #bee0da;
+        }
+
+        #video1,
+        #video2,
+        #video3 {
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        #video1 div,
+        #video2 div,
+        #video3 div {
+
+            height: 315px;
+
+
+        }
+
+        #containervideo {
+            margin-top: 10rem;
+        }
+
+        footer {
+            margin-top: 5rem;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid black;
+            margin-left: 2rem;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="menuknap" class="burger_svg"></div>
+
+            <ul id="menu" class="">
+                <li><a href="index.html">Øl</a></li>
+                <li><a href="">Musik</a></li>
+                <li><a href="video.html">Tuborg'sk Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="containervideo">
+            <section id="video1">
+                <video controls loop width="560" height="315" title="Tuborg Nul Kampangevideo">
+                    <source src="kampagne_video_25_sek_version2.mp4" type="video/mp4">
+                </video>
+
+                <div>
+                    <h1>Splash video</h1>
+                </div>
+
+            </section>
+            <section id="video2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ywQaD6eAEe0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <h1>SoMe video</h1>
+                </div>
+
+            </section>
+            <section id="video3">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g6IlYuk8olk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <h1>Kampagne video</h1>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>Kundeservice tlf: 00000000</p>
+            <p>Kundeservice@carlsberg.dk</p>
+        </div>
+        <div>
+            <p>Privatpilitik</p>
+            <p>Cookiepolitik</p>
+            <p>Vilkår og betingelser</p>
+        </div>
+        <div>
+            <p>Politik for acceptabel brug</p>
+            <p>Se fødevarestyrelsens smiley-rapporter</p>
+        </div>
+        <div>
+            <img src="SVG/fb_green.svg" alt="facebook svg logo">
+            <img src="SVG/insta_green.svg" alt="instagram svg logo">
+        </div>
+    </footer>
+
+    <script src=""></script>
+</body></html>

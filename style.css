@@ -1,6 +1,15 @@
  * {
      margin: 0;
+     padding: 0;
  }
+
+ main {
+     position: relative;
+     width: 100%;
+     overflow: hidden;
+ }
+
+ /* TEXT MOBIL*/
 
  p,
  h1,
@@ -16,27 +25,101 @@
  h2,
  h3 {
      font-family: 'Calistoga', cursive;
+     font-size: 40px;
  }
 
  a {
      font-family: 'Calistoga', cursive;
  }
 
+ /*  FOOTER  MOBIL*/
+
+ footer img {
+     width: 5rem;
+ }
+
+ footer {
+     background-color: #263d80;
+     padding: 3em 2em;
+     padding-bottom: 6em;
+     display: grid;
+     grid-gap: 10px;
+ }
+
+ footer p {
+     color: #fff;
+ }
+
+ /*  BUTTON MOBIL  */
+
+ button {
+     color: #fff;
+     background-color: #263d80;
+     border-radius: 25px;
+     border: none;
+     cursor: pointer;
+     text-align: center;
+     text-decoration: none;
+     padding: 1em 2em;
+     max-width: 200px;
+ }
+
+
+ /*   SPLASH MOBIL*/
  #splash {
      background-color: #263d80;
  }
 
  #splash img {
      max-width: 100%;
+     height: 90vh;
+ }
+
+ #splash_container {
+     position: absolute;
+     z-index: 2;
+     margin-top: 50vw;
+     margin-left: 10vw;
+ }
+
+ #splash_container h1,
+ #splash_container,
+ h2 {
+     color: #fff;
+ }
+
+ @media (max-width: 800px) {
+     .overlay img {
+         display: none;
+     }
+
+     #splash video {
+         display: none;
+     }
+ }
+
+ #splash_img {
+     width: 100vw;
+     height: 80vh;
+     background-image: url(lights.jpg);
+
+
  }
 
 
+ /*  INTRO MOBIL*/
  #intro {
      padding: 3em 2em;
      display: grid;
      grid-gap: 20px;
  }
 
+ #intro h1 {
+     margin-bottom: 1rem;
+ }
+
+
+ /*  FACTS MOBIL*/
  #facts {
      background-color: #fdecd7;
      padding-top: 3em;
@@ -55,6 +138,8 @@
      padding: 3em 2em;
  }
 
+ /* SMELL  AND TASTE MOBIL*/
+
  #smellandtaste {
      background-color: #263d80;
      color: #fff;
@@ -68,10 +153,8 @@
      color: #fff;
  }
 
- #holder {
-     position: absolute;
- }
 
+ /*  DATA MOBIL */
  #data {
      background-color: #bee0da;
  }
@@ -83,6 +166,39 @@
      grid-template-columns: repeat(3, 1fr);
  }
 
+ #personer img {
+     display: list-item;
+     width: 70px;
+     cursor: pointer;
+ }
+
+ #personer {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     max-width: 700px;
+     height: 200px;
+ }
+
+ #person1 {
+     grid-column: 1/1;
+ }
+
+ #person2 {
+     grid-column: 2/2;
+ }
+
+ #person3 {
+     grid-column: 3/3;
+ }
+
+ #person4 {
+     grid-column: 4/4;
+ }
+
+ #personer img:hover {
+     width: 100px;
+ }
+
  #graph {
      background-color: #fff;
      padding: 3em 2em;
@@ -90,14 +206,17 @@
      box-shadow: 0px 5px 10px #263d80;
  }
 
+ #databeskrivelse div {
+     padding: 3em 2em;
+ }
+
+ #databeskrivelse div h1 {
+     margin-bottom: 1rem;
+ }
 
  #databeskrivelse {
      grid-column: 1/4;
      grid-row: 1/1;
- }
-
- #databeskrivelse img {
-     display: none;
  }
 
  #graph {
@@ -110,29 +229,18 @@
      grid-row: 4/4;
  }
 
- #arrow_right {
-     background-image: url(SVG/arrow_right.svg);
-     justify-self: end;
-     height: 40px;
-     width: 50px;
-     border-radius: 50%;
-     grid-column: 3/4;
-     grid-row: 3/3;
- }
-
- #arrow_left {
-     background-image: url(SVG/arrow_left.svg);
-     height: 40px;
-     width: 50px;
-     border-radius: 50%;
-     grid-column: 1/2;
-     grid-row: 3/3;
+ #holder {
+     background-color: #263d80;
+     border-radius: 25px;
+     color: #fff;
+     padding: 1em 2em;
  }
 
 
  #graphinfo {
      background-color: #fff;
      padding: 3em 2em;
+     margin-top: 20px;
      border-radius: 10px;
      box-shadow: 0px 5px 10px #263d80;
      display: grid;
@@ -140,64 +248,65 @@
  }
 
 
+ /*  GAME MOBIL*/
  #game {
      background-color: #fdecd7;
      padding: 3em 2em;
  }
 
- #game img {
-     max-width: 100%;
+ #containergame {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     max-width: 1000px;
+     margin: 0 auto;
+     justify-content: space-between;
+ }
+
+ #containergame img {
+     max-width: 300px;
  }
 
  #logotilgame {
-     width: 300px;
-     height: 400px;
+     flex-grow: 1;
+     flex-basis: 400px;
  }
 
- #game article {
-     display: grid;
-     grid-gap: 20px;
+ #gamedescription {
+     flex-grow: 1;
+     flex-basis: 500px;
+     margin: auto;
  }
 
+ #gamedescription h1 {
+     padding-bottom: 1rem;
+ }
+
+ #gamedescription p {
+     padding-bottom: .8rem;
+ }
+
+ #gamedescription #play {
+     margin-bottom: 1rem;
+     margin-top: 3rem;
+ }
+
+
+ /* PLAY GAME MOBIL*/
  #playgame {
-     background-color: #bee0da;
+     background-color: #fdecd7;
      border-radius: 10px;
      padding: 3em 2em;
-     margin: 3em 2em;
      display: grid;
      grid-template: repeat(1fr);
      grid-gap: 20px;
+     width: 500px;
  }
 
  #playgame button {
      width: 200px
  }
 
- footer {
-     background-color: #263d80;
-     padding: 3em 2em;
-     padding-bottom: 6em;
-     display: grid;
-     grid-gap: 10px;
- }
-
- footer p {
-     color: #fff;
- }
-
- /*---------------*/
-
- button {
-     color: #fff;
-     background-color: #263d80;
-     border-radius: 25px;
-     border: none;
-     cursor: pointer;
-     text-align: center;
-     text-decoration: none;
-     padding: 1em 2em;
-     max-width: 200px;
- }
 
  .svarmulighed {
      color: #fff;
@@ -208,19 +317,23 @@
      text-align: center;
      text-decoration: none;
      padding: 1em 2em;
+     width: 200px;
+     height: 20px;
+
  }
 
- /*---------------*/
+ /*   HEADER   */
 
  header nav {
      left: 0;
      bottom: 0;
      right: 0;
      padding: 0px 0px;
-     height: 60px;
-     background-color: #2f2f2f;
+     height: 80px;
+     background-color: #f2f2f2;
      z-index: 100;
      position: fixed;
+
  }
 
  #menuknap {
@@ -238,9 +351,9 @@
      list-style: none;
  }
 
- header ul li a {
+ x header ul li a {
      text-decoration: none;
-     color: white;
+     color: Black;
 
  }
 
@@ -257,34 +370,50 @@
  }
 
 
- .hidden {
-     opacity: 1;
-     transform: translateY(-132%);
- }
-
- /*---------------------*/
+ /*   CLASSES */
  .hide {
      display: none;
  }
 
+ .hidden {
+     opacity: 1;
+     transform: translateY(-125%);
+ }
 
- /*----MENU mobile------*/
+ /*----MENU MOBIL------*/
 
  @media (max-width:800px) {
      header ul {
          display: flex;
          flex-direction: column;
-         background-color: rgba(35, 35, 35);
+         background-color: #fff;
 
      }
 
      header ul li {
          margin: 20px 20px;
+
+     }
+
+     header li a {
+         color: Black;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 25px;
+     }
+
+     #graph img {
+         display: none;
      }
  }
 
  /*------MENU WEB------*/
  @media (min-width: 800px) {
+
+     header nav {
+         top: 0;
+
+     }
 
      #menuknap {
          display: none;
@@ -292,48 +421,138 @@
 
 
      header ul {
-         max-width: 400px;
+         max-width: 500px;
          margin: 0px auto;
          display: flex;
          justify-content: space-between;
+         align-items: center;
+         height: 80px;
      }
 
-
      header li a {
-         color: white;
+         color: Black;
          text-decoration: none;
          display: inline-block;
-         font-size: 18px;
+         font-size: 25px;
+     }
+
+     #containergame img {
+         max-width: 100%;
      }
  }
 
- /*-------------------*/
+ /*   KEYFRAMES    */
 
- @media (min-width: 800px) {
-     header nav {
-         top: 0;
+ .pulse {
+     animation: pulse 2s ease-in-out infinite;
+
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(.9);
      }
 
-     #splash img {
+
+     50% {
+         transform: scale(1.0);
+     }
+
+     100% {
+         transform: scale(.9);
+     }
+ }
+
+
+ @media only screen and (min-width: 600px) and (max-width:900px) {
+     .overlay img {
          display: none;
-     }
-
-     #splash h1,
-     #splash h2 {
-         color: #fff;
-     }
-
-     #intro,
-     #databeskrivelse {
-         max-width: 1200px;
-         margin: 0 auto;
-
      }
 
      #facts {
          display: grid;
          grid-template-columns: repeat(10, 1fr);
-         grid-template-rows: repeat(8, .2fr);
+         grid-template-rows: repeat(17, .2fr);
+         padding: 0;
+     }
+
+     #can {
+         grid-column: 3/9;
+         grid-row: 2/8;
+         z-index: 2;
+     }
+
+     #beerinfo {
+         grid-column: 3/9;
+         grid-row: 13/17;
+         z-index: 3;
+     }
+
+     #smellandtaste {
+         grid-column: 3/9;
+         grid-row: 8/13;
+         display: flex;
+         justify-content: center;
+
+     }
+
+     #smellandtaste .container {
+         max-width: 300px;
+     }
+
+ }
+
+ @media only screen and (min-width: 900px) {
+
+     footer {
+         background-color: #263d80;
+         padding: 3em 2em;
+         padding-bottom: 0;
+         display: grid;
+         grid-gap: 10px;
+     }
+
+
+     #facts {
+         display: grid;
+         grid-template-columns: repeat(10, 1fr);
+         grid-template-rows: repeat(13, .2fr);
+         padding: 0;
+     }
+
+     #can {
+         grid-column: 2/6;
+         grid-row: 4/7;
+         z-index: 2;
+     }
+
+     #beerinfo {
+         grid-column: 3/9;
+         grid-row: 8/12;
+         z-index: 3;
+     }
+
+     #smellandtaste {
+         grid-column: 5/10;
+         grid-row: 2/8;
+         display: flex;
+         justify-content: flex-end;
+
+     }
+
+     #smellandtaste .container {
+         max-width: 300px;
+     }
+
+ }
+
+ @media (min-width: 1200px) {
+     /*   FACTS     */
+
+     #facts {
+         display: grid;
+         grid-template-columns: repeat(10, 1fr);
+         grid-template-rows: repeat(9, .2fr);
          padding: 0;
      }
 
@@ -345,71 +564,98 @@
 
      #beerinfo {
          grid-column: 4/7;
-         grid-row: 5/8;
+         grid-row: 5/9;
          z-index: 3;
      }
 
      #smellandtaste {
          grid-column: 3/10;
-         grid-row: 3/7;
+         grid-row: 3/8;
          display: flex;
          justify-content: flex-end;
          padding: 2rem;
+     }
+
+     #smellandtaste h3 {
+         padding-bottom: 2rem;
      }
 
      #smellandtaste .container {
          max-width: 300px;
      }
 
-     /*---data---*/
+     .barchart text {
+         fill: #fff;
+     }
+
+     .barchart line {
+         stroke: #fff;
+     }
+ }
+
+ @media (min-width: 1000px) {
+     /*   HEADER, SPLASH OG INTRO     */
 
 
-     #personer img {
-         display: list-item;
-         width: 80px;
-         cursor: pointer;
+
+     .overlay img {
+         position: absolute;
+         z-index: 2;
+         margin-top: 15vw;
+         margin-left: 80vw;
+         width: 500px;
+     }
+
+     #splash_img {
+         display: none;
+     }
+
+     #splash_can img {
+         z-index: 5;
+         margin-top: 25vw;
+         margin-left: 10vw;
+     }
+
+     #splash h1,
+     #splash h2 {
+         color: #fff;
+         font-size: 80px;
+     }
+
+     #splash_container {
+         position: absolute;
+         z-index: 2;
+         margin-top: 25vw;
+         margin-left: 10vw;
      }
 
 
-     #personer {
-         display: grid;
-         grid-template-columns: repeat(4, 1fr);
-         max-width: 600px;
+     #intro,
+     #databeskrivelse {
+         max-width: 1200px;
          margin: 0 auto;
-         height: 250px;
+         padding: 3rem 2rem;
      }
 
-     #person1 {
-         grid-column: 1/1;
+     #intro div,
+     #databeskrivelse div {
+         width: 700px;
+         padding: 0;
      }
 
-     #person2 {
-         grid-column: 2/2;
-     }
 
-     #person3 {
-         grid-column: 3/3;
-     }
 
-     #person4 {
-         grid-column: 4/4;
-     }
-
-     #personer img:hover {
-         width: 100px;
-     }
-
-     /*------*/
-
-     #graph img {
-         width: 200px;
-         max-width: 200px;
+     /*   GRAFER     */
+     #personer {
+         margin-left: 5rem;
      }
 
      #datagrid {
+         padding: 0;
+         padding-top: 3rem;
          display: grid;
          grid-template-columns: repeat(9, 1fr);
-         grid-template-rows: repeat(5, 1fr);
+         grid-template-rows: repeat(6, 1fr);
      }
 
      #graph {
@@ -417,87 +663,45 @@
          grid-row: 1/5;
          padding: 0;
          display: grid;
-         grid-template-columns: repeat (3, 1fr);
          max-height: 600px;
-
-     }
-
-     #graphinfo {
-         grid-column: 5/9;
-         grid-row: 4/6;
-         z-index: 10;
-     }
-
-     #arrow_right {
-         height: 40px;
-         width: 50px;
-         grid-column: 9/9;
-         grid-row: 3/3;
      }
 
      #graph img {
+         width: 200px;
+         max-width: 200px;
          grid-column: 1/1;
          margin: auto;
      }
 
-     #diagram {
-         grid-column: 2/2;
+     .visdata {
+         grid-column: 2/3;
+         grid-row: 2/2;
+         margin: auto;
+         min-width: 300px;
+     }
+
+     #graphtxt {
          grid-row: 1/1;
+         grid-column: 1/3;
+         padding: 3em 3em 0em 3em;
+     }
+
+     #holder {
+         grid-column: 2/3;
+         grid-row: 2/2;
+         height: 1rem;
+         width: 180px;
          margin: auto;
      }
 
-     #mouseoverdiagram {
-         grid-column: 2/2;
-         grid-row: 1/1;
-         z-index: 20;
-         height: 20px;
-         width: 200px;
-         margin: auto;
-     }
 
      #graph1 {
          display: grid;
          grid-gap: 20px;
      }
 
-     .hide {
-         display: "";
+     #graphinfo {
+         grid-column: 6/9;
+         grid-row: 4/6;
+         z-index: 10;
      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- }

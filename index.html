@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -13,17 +13,29 @@
         #diagram {
             /*border: 1px solid #000;*/
             border-radius: 50%;
-            width: 80%;
+            width: 100%;
             max-width: 300px;
             stroke-width: 15;
             fill: none;
             font-size: .5em;
             transform: rotate(-90deg);
+            animation: 1s ease-in;
+            animation-name: scale;
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         #udsnit1 {
-            stroke: #fdecd7;
 
+            stroke: #658BEB;
         }
 
         #udsnit2 {
@@ -32,30 +44,69 @@
         }
 
         #udsnit3 {
-            stroke: #658BEB;
 
-        }
-
-        #udsnit4 {
             stroke: #EBB1CE;
 
         }
 
-        .barchart {
-            max-width: 500px;
+        #udsnit4 {
+            stroke: #fdecd7;
+
         }
 
-        #chart line {
-            stroke: #FFF;
+
+
+        #allesituationer {
+            animation: 1s ease-in;
+            animation-name: scaleh1;
+        }
+
+        @keyframes scaleh1 {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #barchart {
+            animation: 1s ease-in;
+            animation-name: scaleY;
+        }
+
+        @keyframes scaleY {
+            0% {
+                transform: scaleY(0);
+            }
+
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        .barchart {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .chart line {
+            stroke: #fff;
             stroke-width: .5;
         }
 
-        #chart .genre {
+        .chartline {
+            stroke: black;
+            stroke-width: .5;
+        }
+
+        .genre {
             font-size: 13px;
             font-family: sans-serif;
         }
 
-        #chart .maaleenhed {
+        .chart .maaleenhed {
             font-size: 9px;
             font-family: sans-serif;
         }
@@ -70,92 +121,174 @@
             color: indianred;
         }
 
-        /* Show the tooltip text when you mouse over the tooltip container */
+        #barchart {
+            min-width: 300px;
+        }
+
+
+        .chart text {
+            font-size: 5px;
+            font-family: sans-serif;
+        }
+
+        .bars {
+            stroke-width: 20;
+            stroke: red;
+        }
+
+        .fine {
+            stroke: #bee0da;
+        }
+
+        .not_fine {
+            stroke: #fdecd7;
+        }
+
+        /*diagram tilføjelse*/
+
+        .person {
+            width: 200px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #allesituationer {
+
+            min-width: 300px;
+        }
+
+        #allesituationer h1 {
+
+            font-size: 90px;
+        }
+
+        #curvechart {
+            min-width: 300px;
+        }
+
+        #c_chart line {
+            stroke: black;
+            stroke-width: .5;
+        }
+
+        #c_chart text {
+            font-size: 5px;
+            font-family: sans-serif;
+        }
+
+        #curve {
+            stroke-width: 1;
+            stroke: #263d80;
+            fill: none;
+            transition: 5s ease-in;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+        }
+
+        /*diagram tilføjelse slut*/
 
     </style>
 </head>
 
 <body>
     <header>
+
         <nav>
             <div id="menuknap" class="burger_svg"></div>
+
             <ul id="menu" class="">
-                <li><a href="index.html">Forside</a></li>
-                <li><a href="dokumentation.html">Dokumentation</a></li>
-                <li><a href="video.html">Videoer</a></li>
+                <li><a href="index.html">Øl</a></li>
+                <li><a href="">Musik</a></li>
+                <li><a href="video.html">Tuborg'sk Video</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="splash">
-            <img src="SVG/splash.png" alt="" class="hide">
-            <video controls loop width="100%" height="100%" title="Tuborg Nul Kampangevideo">
-                <source src="kampagne_video_25_sek_version2.mp4" type="video/mp4"></video>
-            <h1>Tuborg</h1>
-            <h2>Præcis som ingen andre øl</h2>
+
+            <div id=splash_container>
+                <h1>Tuborg Nul</h1>
+                <h2>Præcis når du vil</h2>
+            </div>
+            <div class="overlay">
+                <img src="Tuborg_NUL_assets/114604_Tuborg_NUL_Packshot_%2033cl_Can_WET.png" alt="Tuborg  Nul øl">
+            </div>
+
+            <div id="splash_img"></div>
+
+            <video autoplay muted loop width="100%" height="100%" title="Tuborg Nul Kampangevideo">
+                <source src="kampagne_video_25_sek_version2.mp4" type="video/mp4">
+            </video>
+
+
         </section>
 
         <section id="intro">
-            <h1>Præcis når du vil</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iste voluptate nobis quibusdam, necessitatibus iure libero commodi facere tenetur aliquam, atque, rem vitae. Mollitia in consectetur id explicabo nostrum ut necessitatibus. </p>
-
+            <div>
+                <h1>Undskyldninger er der nok af</h1>
+                <p>… Tuborg Nul behøver ikke være en af dem.</p>
+                <p>Med Tuborg Nul behøver du hverken at gå på kompromis med smagen eller hverdagens store og små øjeblikke. </p>
+            </div>
         </section>
 
         <section id="facts">
             <div id="can">
-                <img src="SVG/Screenshot%202020-10-12%20at%2001.35.13.png" alt="">
+                <img src="SVG/Screenshot%202020-10-12%20at%2001.35.13.png" alt="Tuborg  Nul øl">
             </div>
 
             <article id="beerinfo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt perspiciatis voluptatem porro laudantium. Veniam, minus. Doloribus perferendis beatae quibusdam nulla laudantium inventore alias, id ex vitae veniam similique voluptatibus incidunt porro, corrupti explicabo dignissimos consequuntur quos! Eos nemo quia dolores voluptates natus rerum at explicabo! Quam rem at blanditiis neque aliquam quo? Sunt nulla laudantium pariatur.</p>
+                <p>Tuborg Nul er en forfriskende, let drikkeligt og velskummende oplevelse med frugtlige noter, som vi kender den fra Grøn Tuborg. Men alligevel er den præcis som ingen andre - og kan nydes præcis når du vil.</p>
+                <p>Så hvad end om du skal køre hjem, tidligt op eller bare har lyst til smagen af Tuborg. Så kan du med god samvittighed snuppe én til.<br><br>Men vigtigst af alt - Den kan nydes i alle situationer og drikkes præcis når du vil!</p>
             </article>
 
             <article id="smellandtaste">
                 <div class="container">
                     <h3>Duft og smag</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ad maxime, voluptas eligendi aliquam animi.</p>
-                    <svg class="barchart" viewbox="0 0 200 70">
-                        <g id="chart">
+                    <p></p>
+                    <svg class="barchart" viewbox="0 0 250 60">
+                        <g class="chart">
                             <text class="genre" x="0" y="20">Fylde</text>
                             <text class="maaleenhed" x="0" y="40">LET</text>
                             <text class="maaleenhed" x="150" y="40">KRAFTIG</text>
 
-                            <line x="0" x2="200" y1="50" y2="50"></line>
+                            <line x1="0" x2="200" y1="50" y2="50"></line>
                         </g>
 
                         <g class="bar">
-                            <circle id="udsnit1" cx="50" cy="50" r="3"></circle>
+                            <circle class="udsnit" cx="50" cy="50" r="3"></circle>
                         </g>
 
                     </svg>
-                    <svg class="barchart" viewbox="0 0 200 70">
-                        <g id="chart">
+
+                    <svg class="barchart" viewbox="0 0 250 60">
+                        <g class="chart">
                             <text class="genre" x="0" y="20">Livlighed</text>
                             <text class="maaleenhed" x="0" y="40">ROLIG</text>
                             <text class="maaleenhed" x="160" y="40">LIVLIG</text>
-
-                            <line x="0" x2="200" y1="50" y2="50"></line>
+                            <line x1="0" x2="200" y1="50" y2="50"></line>
                         </g>
 
 
                         <g class="bar">
-                            <circle id="udsnit1" cx="100" cy="50" r="3"></circle>
+                            <circle class="udsnit" cx="100" cy="50" r="3"></circle>
                         </g>
 
                     </svg>
 
-                    <svg class="barchart" viewbox="0 0 200 70">
-                        <g id="chart">
+                    <svg class="barchart" viewbox="0 0 250 70">
+                        <g class="chart">
                             <text class="genre" x="0" y="20">Bitterhed</text>
                             <text class="maaleenhed" x="0" y="40">LIDT</text>
                             <text class="maaleenhed" x="160" y="40">MEGET</text>
 
-                            <line x="0" x2="200" y1="50" y2="50"></line>
+                            <line x1="0" x2="200" y1="50" y2="50"></line>
                         </g>
 
                         <g class="bar">
-                            <circle id="udsnit1" cx="50" cy="50" r="3"></circle>
+                            <circle class="udsnit" cx="50" cy="50" r="3"></circle>
                         </g>
 
                     </svg>
@@ -165,26 +298,70 @@
 
         <section id="data">
             <article id="databeskrivelse">
-                <h1>Grafer som beskriver Nul</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, nulla autem deleniti quasi ad, dolores placeat et atque ea voluptatum.</p>
-                <div id="personer">
-                    <img id="person1" src="SVG/person_1_1.svg" alt="">
-                    <img id="person2" src="SVG/Person_2_1.svg" alt="">
-                    <img id="person3" src="SVG/Person_3_1.svg" alt="">
-                    <img id="person4" src="SVG/person_4_1.svg" alt="">
+                <div>
+                    <h1>Vidste du at...</h1>
+                    <p>Hvis du trykker på en af personerne, så vil du se noget spændende!</p>
                 </div>
+                <div id="personer">
+                    <img id="person1" class="filter pulse" data-kategori="person1" src="SVG/person_1_1.svg" alt="Illustrator  tegning af person simel">
+                    <img id="person2" class="filter pulse" data-kategori="person2" src="SVG/Person_2_1.svg" alt="Illustrator  tegning af person simel">
+                    <img id="person3" class="filter pulse" data-kategori="person3" src="SVG/Person_3_1.svg" alt="Illustrator  tegning af person simel">
+                    <img id="person4" class="filter pulse" data-kategori="person4" src="SVG/person_4_1.svg" alt="Illustrator  tegning af person simel">
+                </div>
+
+
             </article>
+
+
             <div id="datagrid">
                 <article id="graph">
-                    <img src="SVG/person_1.svg" alt="">
+                    <div id="graphtxt">
+                        <h1 id=h1txt>Tryk på en af de små personer!</h1>
 
+                    </div>
 
+                    <img id="personvedgraf" src="SVG/person_1_1.svg" alt="illustrator tegning af simpel mand">
 
-                    <svg id="diagram" viewbox="0 0 100 100">
+                    <p id="holder">Tryk på en af personerne</p>
+
+                    <svg id="diagram" class="visdata" viewbox="0 0 100 100">
                         <circle id="udsnit1" cx="50" cy="50" r="50"></circle>
                         <circle id="udsnit2" cx="50" cy="50" r="50"></circle>
-                        <circle id="udsnit3" cx="50" cy="50" r="50"></circle>
-                        <circle id="udsnit4" cx="50" cy="50" r="50"></circle>
+
+                    </svg>
+
+                    <svg id="barchart" class="visdata" viewbox="-20 -10 230 120">
+                        <g id="chart" class="chartline">
+
+                            <text class="genre" x="-20" y="5">100 %</text>
+                            <text class="genre" x="-20" y="52">50% </text>
+                            <text class="genre" x="-20" y="100">0% </text>
+                            <line x1="0" x2="0" y1="100" y2="0"></line>
+                            <line x1="0" x2="200" y1="100" y2="100"></line>
+                        </g>
+
+                        <g class="bars">
+                            <line class="less_than_two fine" x1="40" x2="40" y1="10" y2="100"></line>
+                            <line class="less_than_two not_fine" x1="70" x2="70" y1="50" y2="100"></line>
+                            <line class="less_more_two fine" x1="120" x2="120" y1="20" y2="100"></line>
+                            <line class="less_more_two not_fine" x1="150" x2="150" y1="20" y2="100"></line>
+                        </g>
+
+
+                    </svg>
+
+                    <div id="allesituationer" class="visdata">
+                        <h1>9,14%</h1>
+                    </div>
+                    <svg id="curvechart" class="visdata" viewbox="-20 -10 230 120">
+                        <g id="c_chart">
+                            <text x="-10" y="5">100</text>
+                            <text x="-8" y="52">50</text>
+                            <text x="-5" y="100">0</text>
+                            <line x1="0" x2="0" y1="100" y2="0"></line>
+                            <line x1="0" x2="200" y1="100" y2="100"></line>
+                        </g>
+                        <polyline id="curve" pathLength="1"></polyline>
                     </svg>
 
 
@@ -192,68 +369,107 @@
 
                 <div id="graphinfo">
                     <article id="graph1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sed laboriosam, possimus quod facilis. Molestiae nam labore harum hic qui voluptatum consequuntur itaque aspernatur, accusamus recusandae repellendus mollitia dicta quam repellat architecto iure veritatis, ipsa alias.</p>
-                        <button id="graphbut">Læs mere</button>
+                        <p id=graphinfoinput>Hvis du klikker på personerne vises der noget interessant data, som beskrives i denne boks</p>
+
                     </article>
                 </div>
 
-                <div id="arrow_right"></div>
-                <div id="arrow_left"></div>
+
+
+
             </div>
+
         </section>
 
         <section id="game">
-            <article>
-                <img src="" alt="">
-                <img id="logotilgame" src="Tuborg_NUL_assets/tuborglogoweb.svg" alt="">
-            </article>
-            <article>
-                <h1>Vind med Nul</h1>
-                <p>Besvar quizzen deltag i lodtrækningen om at vinde en 24 pack Tuborg Nul!</p>
-                <button>Klik for at deltage</button>
-            </article>
+            <div id="containergame">
+                <article id="logotilgame">
+                    <img src="Tuborg_NUL_assets/vind_med_nul.svg" alt="">
+                </article>
+                <article id="gamedescription">
+                    <h1>Vind med Nul</h1>
+                    <p>Undskyldninger er der nok af!</p>
+                    <p> Vi ser ingen grund til, at du ikke skulle hoppe ind og deltage konkurrencen om at vinde en 24 pack Tuborg Nul til dit næste arrangement.</p>
+                    <p>Med Tuborg Nul behøver du hverken at gå på kompromis med</p>
+                    <p>smagen eller hverdagens store og små øjeblikke.</p>
+                    <button id="play">Klik for at deltage</button>
+                    <p>OBS! Hvis du svarer rigtig på alle spørgsmål, bliver du lagt to gange i puljen. </p>
+                    <p>- Alle svar findes på sitet</p>
+                </article>
+                <article id="playgame">
+                    <h1 id="gameheadline">Spørgsmål 1/6</h1>
+                    <p id="question">Hvor mange procent alkohol er der i Tuborg Nul?</p>
+                    <div class="svarmulighed" id="answer1">0 Procent</div>
+                    <div class="svarmulighed" id="answer2">0,6 Procent</div>
+                    <div class="svarmulighed" id="answer3">0,2 Procent</div>
+                    <div class="svarmulighed" id="answer4">1 Procent</div>
+                </article>
+            </div>
         </section>
 
-        <section id="playgame">
-            <h1 id="gameheadline">Spørgsmål 1/6</h1>
-            <p id="question">Hvor mange procent alkohol er der i Tuborg Nul?</p>
-            <div class="svarmulighed" id="answer1">0 Procent</div>
-            <div class="svarmulighed" id="answer2">0,6 Procent</div>
-            <div class="svarmulighed" id="answer3">0,2 Procent</div>
-            <div class="svarmulighed" id="answer4">1 Procent</div>
-        </section>
+
     </main>
 
     <footer>
-        <p>Kundeservice tlf: 00000000</p>
-        <p>Kundeservice@carlsberg.dk</p>
-        <p>Privatpilitik</p>
-        <p>Cookiepolitik</p>
-        <p>Vilkår og betingelser</p>
-        <p>Politik for acceptabel brug</p>
-        <p>Se fødevarestyrelsens smiley-rapporter</p>
-        <img src="" alt="facebook svg logo">
-        <img src="" alt="instagram svg logo">
+        <div>
+            <p>Kundeservice tlf: 00000000</p>
+            <p>Kundeservice@carlsberg.dk</p>
+        </div>
+        <div>
+            <p>Privatpilitik</p>
+            <p>Cookiepolitik</p>
+            <p>Vilkår og betingelser</p>
+        </div>
+        <div>
+            <p>Politik for acceptabel brug</p>
+            <p>Se fødevarestyrelsens smiley-rapporter</p>
+        </div>
+        <div>
+            <img src="SVG/fb_green.svg" alt="facebook svg logo">
+            <img src="SVG/insta_green.svg" alt="instagram svg logo">
+        </div>
     </footer>
 
-    <p id="holder"></p>
+
 
     <script>
         window.addEventListener("load", sidenVises);
 
+        const person1 = document.querySelector("#person1");
+        const person2 = document.querySelector("#person2");
+        const person3 = document.querySelector("#person3");
+        const person4 = document.querySelector("#person4");
+        const personGraf = document.querySelector("#personvedgraf");
+        const grafInfoInput = document.querySelector("#graphinfoinput");
+        let h1txt = document.querySelector("#h1txt");
 
-        // menu
+
+        const holder = document.querySelector('#holder');
+
 
         function sidenVises() {
             console.log(sidenVises);
 
             document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
-            answer1.addEventListener("click", question2);
-            answer2.addEventListener("click", question2);
-            answer3.addEventListener("click", question2);
-            answer4.addEventListener("click", question2);
+            playGame.style.display = "none";
+            play.addEventListener("click", question1);
+
+
+
+            document.querySelector("#person1").addEventListener("click", clickPerson1);
+            document.querySelector("#person2").addEventListener("click", clickPerson2);
+            document.querySelector("#person3").addEventListener("click", clickPerson3);
+            document.querySelector("#person4").addEventListener("click", clickPerson4);
+
+            document.querySelector("#barchart").classList.add("hide");
+            document.querySelector("#diagram").classList.add("hide");
+            document.querySelector("#allesituationer").classList.add("hide");
+            document.querySelector("#curvechart").classList.add("hide");
+
+
         }
+
 
         function toggleMenu() {
             console.log(toggleMenu);
@@ -269,55 +485,149 @@
             }
         }
 
-        //cirkel diagram
-        const values = [5, 2, 3, 2];
-        const offset = [0, 5, 7, 10];
-        const omkreds = Math.PI * 100;
-        const holder = document.querySelector('#holder');
-        let total = 0;
+        //diagrammer
 
-        // Beregner summen af værdierne
-        values.forEach(value => total += value);
+        function clickPerson1() {
 
-        // Beregner forholdet
-        const forhold = omkreds / total;
-
-        document.querySelectorAll("#diagram circle").forEach((c, i) => {
-            c.style.strokeDasharray = values[i] * forhold + " " + omkreds;
-
-            offset.push(values[i] + offset[i]);
-
-            c.style.strokeDashoffset = -offset[i] * forhold;
-
-            c.setAttribute("data-value", values[i]);
-            c.setAttribute("data-procent", values[i] / total * 100);
-
-            //lytter efter mouseover og mouseout som kalder functionen vis og removeAll (tilføker og fjerner text i cirkeldiagrammet)
-            c.addEventListener("mouseover", e => vis(e));
-            c.addEventListener("mouseout", removeAll);
-
-        })
-
-        //viser text på mouse over i cirkeldiagram når eventlistneren hører mouseover
-        function vis(e) {
-            holder.textContent = /*e.target.dataset.value + "/" + */ e.target.dataset.procent;
-            holder.style.display = "block";
-            window.addEventListener("mousemove", followMouse);
-        }
-
-        //får holder til at følge musemarkøren
-        function followMouse(e) {
-            console.log(followMouse);
-            holder.style.top = (e.clientY - 50) + 'px';
-            holder.style.left = (e.clientX) + 'px';
-        }
-
-        // Sætter holder til display none når der eventlistneren hører mouseout.
-        function removeAll() {
+            document.querySelector("#barchart").classList.add("hide");
+            document.querySelector("#allesituationer").classList.add("hide");
+            document.querySelector("#curvechart").classList.add("hide");
+            document.querySelector("#diagram").classList.remove("hide");
+            personGraf.src = "SVG/person_1_1.svg";
             holder.style.display = "none";
-            window.removeEventListener("mousemove", followMouse);
+            grafInfoInput.innerHTML = "Ca. hver fjerde dansker... ";
+            h1txt.innerHTML = "Ca. hver fjerde dansker";
+
+
+
+
+            //cirkel diagram
+            const values = [8, 3, ];
+            const offset = [0, 8, ];
+            const omkreds = Math.PI * 100;
+
+            let total = 0;
+
+            // Beregner summen af værdierne
+            values.forEach(value => total += value);
+
+            // Beregner forholdet
+            const forhold = omkreds / total;
+
+            document.querySelectorAll("#diagram circle").forEach((c, i) => {
+                c.style.strokeDasharray = values[i] * forhold + " " + omkreds;
+
+                offset.push(values[i] + offset[i]);
+
+                c.style.strokeDashoffset = -offset[i] * forhold;
+
+                c.setAttribute("data-value", values[i]);
+                c.setAttribute("data-procent", values[i] / total * 100);
+
+                //lytter efter mouseover og mouseout som kalder functionen vis og removeAll (tilføker og fjerner text i cirkeldiagrammet)
+                c.addEventListener("mouseover", e => vis(e));
+                c.addEventListener("mouseout", removeAll);
+            })
+
+            //viser text på mouse over i cirkeldiagram når eventlistneren hører mouseover
+            function vis(e) {
+                console.log(vis);
+                holder.textContent = /*e.target.dataset.value + "/" + */ e.target.dataset.procent;
+                holder.style.display = "";
+            }
+
+
+            // Sætter holder til display none når der eventlistneren hører mouseout.
+            function removeAll() {
+                holder.style.display = "none";
+
+            }
         }
 
+
+        function clickPerson2() {
+
+            document.querySelector("#diagram").classList.add("hide");
+            document.querySelector("#allesituationer").classList.add("hide");
+            document.querySelector("#curvechart").classList.add("hide");
+            document.querySelector("#barchart").classList.remove("hide");
+            personGraf.src = "SVG/person_2_1.svg";
+            holder.style.display = "none";
+            grafInfoInput.innerHTML = "664 personer er blevet spurgt om hvor mange genstande om ugen de ca. drikker. 52,5% svarer at de drikker mindre end 2 øl om ugen. De blev derefter spurgt om hvordan de har det med ikke at drikke alkohol i sociale sammenhænge. 70,3 svarer at de har det fint med det. For gruppen der drikker mere end to øl er det kun 46,5% som siger at de har det fint med ikke at drikke alkohol i socioale sammenhænge. ";
+            h1txt.innerHTML = "Hvor mange genstande drikker du? ";
+
+
+            // ændre værdierne i diagrammet til noget nyt. 
+            const valuesdia = [70.3, 29.7, 46.5, 53.5, ];
+            const barchart = document.querySelector("#barchart");
+
+            const totaldia = valuesdia.reduce((sum, value) => sum + value);
+
+            document.querySelectorAll(".bars line").forEach((bar, i) => {
+                bar.setAttribute("y1", 100 - valuesdia[i]);
+                bar.setAttribute("data-value", valuesdia[i]);
+                bar.setAttribute("data-procent", valuesdia[i] / totaldia * 100);
+                bar.addEventListener("mouseover", e => show(e));
+                bar.addEventListener("mouseout", removeAll2);
+
+            });
+
+            function show(e) {
+                holder.textContent = e.target.dataset.value + "/" + e.target.dataset.procent;
+                holder.style.display = "";
+            }
+
+            function removeAll2() {
+                holder.style.display = "none";
+
+            }
+
+        }
+
+        function clickPerson3() {
+            document.querySelector("#diagram").classList.add("hide");
+            document.querySelector("#barchart").classList.add("hide");
+            document.querySelector("#curvechart").classList.add("hide");
+            document.querySelector("#allesituationer").classList.remove("hide");
+            personGraf.src = "SVG/person_3_1.svg";
+            holder.style.display = "none";
+
+            grafInfoInput.innerHTML = "Ud af gruppen som drikker mindre end 2 øl om ugen svarer  9,14% at man kan drikke alkoholfrie øl i ALLE situationer ";
+            h1txt.innerHTML = "Du Kan altid drikke... ";
+
+        }
+
+        function clickPerson4() {
+
+            document.querySelector("#diagram").classList.add("hide");
+            document.querySelector("#allesituationer").classList.add("hide");
+            document.querySelector("#barchart").classList.add("hide");
+            document.querySelector("#curvechart").classList.remove("hide");
+            personGraf.src = "SVG/person_4_1.svg";
+            holder.style.display = "none";
+            h1txt.innerHTML = "Det er en trend!";
+            grafInfoInput.innerHTML = "Siden 2018 er salget af alkohol steget med 55%";
+
+
+            const data = [0, 55];
+            let punkter = "";
+
+            document.querySelector("#curvechart").addEventListener("mouseover", animer);
+
+            data.forEach((value, i) => {
+                punkter += (i * 200) + "," + (100 - value) + " ";
+                console.log(punkter);
+            })
+
+            function animer() {
+                const curve = document.querySelector("#curve");
+                curve.setAttribute("points", punkter);
+                curve.style.strokeDashoffset = 0;
+                holder.style.display = "none";
+
+            }
+
+        }
 
 
         //Game
@@ -326,8 +636,21 @@
         let answer2 = document.querySelector("#answer2");
         let answer3 = document.querySelector("#answer3");
         let answer4 = document.querySelector("#answer4");
+        const playGame = document.querySelector("#playgame");
+        const play = document.querySelector("#play");
+        const gameDescription = document.querySelector("#gamedescription");
 
         let gameheadline = document.querySelector("#gameheadline");
+
+        function question1() {
+
+            gameDescription.style.display = "none";
+            playGame.style.display = "";
+            answer1.addEventListener("click", question2);
+            answer2.addEventListener("click", question2);
+            answer3.addEventListener("click", question2);
+            answer4.addEventListener("click", question2);
+        }
 
         function question2() {
             console.log(question2);
@@ -395,9 +718,9 @@
             console.log(question6);
 
             gameheadline.innerHTML = "Spørgsmål" + " " + "6/6";
-            question.innerHTML = "Hvor mange % har svært ved at fravælge alkohol i sociale sammenhænhe?";
+            question.innerHTML = "Hvor meget er salget af alkoholfri øl steget siden 2018?";
             answer1.innerHTML = "10%";
-            answer2.innerHTML = "50%";
+            answer2.innerHTML = "55%";
             answer3.innerHTML = "44%";
             answer4.innerHTML = "70%";
             answer1.addEventListener("click", signUp);
@@ -410,13 +733,19 @@
             console.log(signUp);
 
             gameheadline.innerHTML = "Spørgsmål" + " " + "6/6";
-            question.innerHTML = "Indtast din Email og deltag i konkurrencen?";
+            question.innerHTML = "Indtast din email og deltag i konkurrencen?";
             answer1.style.display = "none";
             answer2.style.display = "none";
             answer3.style.display = "none";
             answer4.innerHTML = "Deltag";
 
-            answer4.addEventListener("click", Luk);
+            answer4.addEventListener("click", luk);
+        }
+
+        function luk() {
+            playGame.style.display = "none";
+            gameDescription.style.display = "";
+
         }
 
     </script>
